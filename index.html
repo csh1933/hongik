@@ -11,7 +11,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="홍익궁중전통육개장 원주혁신점" />
   <meta property="og:description" content="진한 사골육수와 파향 가득한 궁중전통육개장 전문점" />
-  <!-- 업체 로고 이미지 지정 -->
   <meta property="og:image" content="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789783631/%EB%A1%9C%EA%B3%A0_%ED%88%AC%EB%AA%85.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -227,7 +226,6 @@
             <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/%EA%B6%81%EC%A4%91%EC%88%9C%EB%91%90%EB%B6%80%EC%9C%A1%EA%B3%84%EC%9E%A5%EA%B0%80%EB%A1%9C.jpg" 
                  alt="궁중순두부육개장" 
                  referrerpolicy="no-referrer"
-                 onerror="this.onerror=null; this.src='https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/궁중순두부육개장가로.jpg';"
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="p-5">
@@ -242,7 +240,6 @@
             <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/%EA%B6%81%EC%A4%91%EB%A7%88%EB%91%90%EC%9C%A1%EA%B3%84%EC%9E%A5%EA%B0%80%EB%A1%9C.jpg" 
                  alt="궁중만두육개장" 
                  referrerpolicy="no-referrer"
-                 onerror="this.onerror=null; this.src='https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/궁중만두육개장가로.jpg';"
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="p-5">
@@ -257,7 +254,6 @@
             <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/%EA%B6%81%EC%A4%91%EC%9C%A1%EA%B3%84%EC%9E%A5%EC%B9%BC%EA%B5%AD%EC%88%98.jpg" 
                  alt="궁중육개장칼국수" 
                  referrerpolicy="no-referrer"
-                 onerror="this.onerror=null; this.src='https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/궁중육개장칼국수.jpg';"
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="p-5">
@@ -272,7 +268,6 @@
             <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871542/%EA%B6%81%EC%A4%91%EC%9C%A1%EA%B3%84%EC%9E%A5%EB%9D%BC%EB%A9%B4.jpg" 
                  alt="궁중육개장라면" 
                  referrerpolicy="no-referrer"
-                 onerror="this.onerror=null; this.src='https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871542/궁중육개장라면.jpg';"
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="p-5">
@@ -281,13 +276,11 @@
           </div>
         </div>
 
-        <!-- 6. 궁중보쌈 (이미지 엑박 보완 처리) -->
+        <!-- 6. 궁중보쌈 (외부 고화질 이미지로 교체 완료) -->
         <div class="bg-stone-900 border border-stone-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all group">
           <div class="h-48 sm:h-56 overflow-hidden relative bg-stone-800">
-            <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/%EA%B6%81%EC%A4%91%EB%B3%B4%EC%8C%88%EA%B0%80%EB%A1%9C.jpg" 
+            <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=800&q=80" 
                  alt="궁중보쌈" 
-                 referrerpolicy="no-referrer"
-                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=800&q=80';"
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="p-5">
@@ -427,8 +420,8 @@
       menu.classList.toggle('hidden');
     }
 
-    // 네이버 지도 API 연동 (원주 미래로 37 좌표)
-    document.addEventListener("DOMContentLoaded", function () {
+    // 네이버 지도 초기화 함수
+    function initMap() {
       if (typeof naver !== 'undefined' && naver.maps) {
         var storeLocation = new naver.maps.LatLng(37.3236, 127.9782);
 
@@ -465,7 +458,14 @@
 
         infowindow.open(map, marker);
       }
-    });
+    }
+
+    // 페이지 로드 시 및 스크립트 로드 대기 처리
+    if (document.readyState === 'complete') {
+      initMap();
+    } else {
+      window.addEventListener('load', initMap);
+    }
   </script>
 </body>
 </html>
