@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 네이버 지도 API에 깃허브 도메인(Origin) 인증 정보가 정확히 전달되도록 설정 -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  
   <title>홍익궁중전통육개장 원주혁신점 | 진한 사골육수와 파향 가득한 육개장 전문점</title>
 
   <!-- URL 공유 시 미리보기 설정 (Open Graph / OG 메타태그) -->
@@ -18,7 +21,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- 네이버 지도 API (Client ID 적용 완료) -->
+  <!-- 네이버 지도 API -->
   <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=g3kglwyamj"></script>
 
   <!-- Noto Serif KR / Noto Sans KR 폰트 -->
@@ -47,7 +50,6 @@
         <a href="#hero" class="flex items-center h-full py-1">
           <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789783631/%EB%A1%9C%EA%B3%A0_%ED%88%AC%EB%AA%85.png" 
                alt="홍익궁중전통육개장" 
-               referrerpolicy="no-referrer"
                class="h-full w-auto object-contain max-w-[280px] sm:max-w-[420px]" />
         </a>
 
@@ -91,7 +93,6 @@
           <div class="flex justify-center lg:justify-start -mb-2">
             <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789783631/%EB%A1%9C%EA%B3%A0_%ED%88%AC%EB%AA%85.png" 
                  alt="홍익궁중전통육개장 로고" 
-                 referrerpolicy="no-referrer"
                  class="h-32 sm:h-52 md:h-60 lg:h-72 w-auto object-contain drop-shadow-2xl" />
           </div>
 
@@ -137,7 +138,6 @@
           <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-stone-700/60 bg-stone-900 group">
             <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/%EA%B6%81%EC%A4%91%EC%A0%84%ED%86%B5%EC%9C%A1%EA%B3%84%EC%9E%A5%EA%B0%80%EB%A1%9C.jpg" 
                  alt="궁중전통육개장" 
-                 referrerpolicy="no-referrer"
                  class="w-full h-[320px] sm:h-[450px] object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
             <div class="absolute bottom-6 left-6 right-6">
@@ -177,11 +177,10 @@
             원주혁신점은 언제나 갓 끓여낸듯 신선하고 따뜻한 보양 한 그릇을 고객 여러분께 전달하겠습니다.
           </p>
         </div>
-        <!-- 브랜드 스토리 이미지 영역 (잘리지 않게 object-contain 및 배경 처리) -->
+        <!-- 브랜드 스토리 이미지 영역 -->
         <div class="rounded-xl overflow-hidden shadow-xl border border-stone-800 bg-stone-900/50 p-2 flex items-center justify-center">
           <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789967899/ganpan.png" 
                alt="홍익궁중전통육개장 간판" 
-               referrerpolicy="no-referrer"
                class="w-full h-auto max-h-80 object-contain rounded-lg" />
         </div>
       </div>
@@ -210,7 +209,6 @@
           <div class="h-48 sm:h-56 overflow-hidden relative bg-stone-800">
             <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/%EA%B6%81%EC%A4%91%EC%A0%84%ED%86%B5%EC%9C%A1%EA%B3%84%EC%9E%A5%EA%B0%80%EB%A1%9C.jpg" 
                  alt="궁중전통육개장" 
-                 referrerpolicy="no-referrer"
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="p-5">
@@ -224,7 +222,6 @@
           <div class="h-48 sm:h-56 overflow-hidden relative bg-stone-800">
             <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/%EA%B6%81%EC%A4%91%EC%88%9C%EB%91%90%EB%B6%80%EC%9C%A1%EA%B3%84%EC%9E%A5%EA%B0%80%EB%A1%9C.jpg" 
                  alt="궁중순두부육개장" 
-                 referrerpolicy="no-referrer"
                  onerror="this.onerror=null; this.src='https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/궁중순두부육개장가로.jpg';"
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
@@ -239,7 +236,6 @@
           <div class="h-48 sm:h-56 overflow-hidden relative bg-stone-800">
             <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/%EA%B6%81%EC%A4%91%EB%A7%88%EB%91%90%EC%9C%A1%EA%B3%84%EC%9E%A5%EA%B0%80%EB%A1%9C.jpg" 
                  alt="궁중만두육개장" 
-                 referrerpolicy="no-referrer"
                  onerror="this.onerror=null; this.src='https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/궁중만두육개장가로.jpg';"
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
@@ -254,7 +250,6 @@
           <div class="h-48 sm:h-56 overflow-hidden relative bg-stone-800">
             <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/%EA%B6%81%EC%A4%91%EC%9C%A1%EA%B3%84%EC%9E%A5%EC%B9%BC%EA%B5%AD%EC%88%98.jpg" 
                  alt="궁중육개장칼국수" 
-                 referrerpolicy="no-referrer"
                  onerror="this.onerror=null; this.src='https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/궁중육개장칼국수.jpg';"
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
@@ -269,7 +264,6 @@
           <div class="h-48 sm:h-56 overflow-hidden relative bg-stone-800">
             <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871542/%EA%B6%81%EC%A4%91%EC%9C%A1%EA%B3%84%EC%9E%A5%EB%9D%BC%EB%A9%B4.jpg" 
                  alt="궁중육개장라면" 
-                 referrerpolicy="no-referrer"
                  onerror="this.onerror=null; this.src='https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871542/궁중육개장라면.jpg';"
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
@@ -284,7 +278,6 @@
           <div class="h-48 sm:h-56 overflow-hidden relative bg-stone-800">
             <img src="https://res.cloudinary.com/ehzxgxcj/image/upload/v1789871541/BOSSAM.jpg" 
                  alt="궁중보쌈" 
-                 referrerpolicy="no-referrer"
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="p-5">
@@ -392,7 +385,7 @@
   </footer>
 
   <!-- ========================================================================= -->
-  <!-- 7. 하단 고정 바 (기존 순서: 전화 연결 | 대표 메뉴 | 매장 안내) -->
+  <!-- 7. 하단 고정 바 (전화 연결 | 대표 메뉴 | 매장 안내) -->
   <!-- ========================================================================= -->
   <div class="fixed bottom-0 left-0 right-0 z-50 bg-[#1C1917]/95 backdrop-blur-md border-t border-stone-800 p-3 sm:px-6 shadow-2xl">
     <div class="max-w-xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
